@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/buttonsDemo" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="rh9A6yPAOg.buttonsDemo" package="rh9A6yPAOg" required_version="2.2"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>buttonsDemo</name>
+</widget>

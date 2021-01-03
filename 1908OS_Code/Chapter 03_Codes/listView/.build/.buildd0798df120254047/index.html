@@ -1,0 +1,64 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Creating list views." />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    
+    <link rel="stylesheet" href="/usr/share/tizen-web-ui-fw/latest/themes/tizen-white/tizen-web-ui-fw-theme.min.css" name="tizen-theme" />
+    <title>List View</title>
+    <script src="/usr/share/tizen-web-ui-fw/latest/js/jquery.min.js"></script>
+    <script src="/usr/share/tizen-web-ui-fw/latest/js/tizen-web-ui-fw-libs.min.js"></script>
+    <script src="/usr/share/tizen-web-ui-fw/latest/js/tizen-web-ui-fw.min.js" data-framework-theme="tizen-white"></script>
+
+    <!--NOTE:
+        Additional scripts and css files are to be placed here.
+        You can use jQuery namespace($) and all functionalities in jQuery
+        in your script.  For example:
+
+            <script src="main.js"></script>
+            <link rel="stylesheet" href="my.css">
+    -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body>
+    <div data-role="page" id="pageMain">
+        <div data-role="header" data-position="fixed">
+            <h1>List View</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+        	<ul data-role="listview">
+        		<li data-role="list-divider">Samples</li>
+        		<li><a href="#pageInfo">Foo</a></li>
+        		<li><a href="#pageInfo">Bar <span data-role="button" data-inline="true" data-icon="arrow-r"></span></a></li>
+    			
+    			  <li class="ui-li-has-multiline"><a href="#pageInfo"><img src="images/smile.png" class="ui-li-bigicon" />
+    Foo
+    <span class="ui-li-text-sub">Bar</span><span data-role="button" data-inline="true" data-icon="info" data-style="circle"></span></a></li>
+    
+        	</ul>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <h4>Tizen Cookbook</h4>
+        </div><!-- /footer -->
+    </div><!-- /pageMain -->
+
+    <div data-role="page" id="pageInfo" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed">
+            <h1>Read-only List</h1>
+        </div><!-- /header -->
+        <div data-role="content">
+        	<ul data-role="listview">
+        		<li>baz</li>
+        		<li>qux</li>
+        	</ul>
+        </div><!-- /content -->
+        <div data-role="footer" data-position="fixed">
+            <h4>Tizen Cookbook</h4>
+        </div><!-- /footer -->
+    </div><!-- /pageInfo -->
+
+
+</body></html>

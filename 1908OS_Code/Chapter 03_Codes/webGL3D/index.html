@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="WebGL 3D demonstration app for Tizen"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    
+    <link rel="stylesheet" href="tizen-web-ui-fw/latest/themes/tizen-white/tizen-web-ui-fw-theme.css" name="tizen-theme"/>
+    <title>WebGL 3D</title>
+    <script src="tizen-web-ui-fw/latest/js/jquery.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw-libs.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw.js"
+        data-framework-theme="tizen-white"></script>
+	<script type="text/javascript" src="./js/webgl-utils.js"></script>
+	<script type="text/javascript" src="./js/webgl-debug.js"></script>
+	
+	<script type="text/javascript" src="./js/J3DI.js"></script>
+	<script type="text/javascript" src="./js/J3DIMath.js"></script>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+	<script id="vshader" type="x-shader/x-vertex">
+    uniform mat4 u_modelViewProjMatrix;
+    uniform mat4 u_normalMatrix;
+    uniform vec3 lightDir;
+
+    attribute vec3 vNormal;
+    attribute vec4 vColor;
+    attribute vec4 vPosition;
+
+    varying float v_Dot;
+    varying vec4 v_Color;
+
+    void main()
+    {
+        gl_Position = u_modelViewProjMatrix * vPosition;
+        v_Color = vColor;
+        vec4 transNormal = u_normalMatrix * vec4(vNormal, 1);
+        v_Dot = max(dot(transNormal.xyz, lightDir), 0.0);
+    }
+	</script>
+	
+	<script id="fshader" type="x-shader/x-fragment">
+    precision mediump float;
+
+    varying float v_Dot;
+    varying vec4 v_Color;
+
+    void main()
+    {
+        gl_FragColor = vec4(v_Color.xyz * v_Dot, v_Color.a);
+    }
+	</script>
+	
+	<script type="text/javascript" src="./js/draw.js"></script>
+    
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>WebGL 3D</h1>
+        </div><!-- /header -->
+
+        <div data-role="content" style="background-color: #FFFFFF;">
+        	<button id="btnPlay">Play</button>
+			<canvas id="screen" width="200" height="200"></canvas>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <h4>Tizen Cookbook</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+</body>
+</html>

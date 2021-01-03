@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/testSand" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="LIgwqNJ4GZ.testSand" package="LIgwqNJ4GZ" required_version="2.2"/>
+    <content src="tests.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>testSand</name>
+</widget>

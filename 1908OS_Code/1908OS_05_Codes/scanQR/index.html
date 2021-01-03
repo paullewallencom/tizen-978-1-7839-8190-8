@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Tizen web application for scanning QR codes"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    
+    <link rel="stylesheet" href="tizen-web-ui-fw/latest/themes/tizen-white/tizen-web-ui-fw-theme.css" name="tizen-theme"/>
+    <title>Scanning QR codes</title>
+    <script src="tizen-web-ui-fw/latest/js/jquery.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw-libs.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw.js"
+        data-framework-theme="tizen-white"></script>
+	
+	<script type="text/javascript" src="js/grid.js"></script>
+	<script type="text/javascript" src="js/version.js"></script>
+	<script type="text/javascript" src="js/detector.js"></script>
+	<script type="text/javascript" src="js/formatinf.js"></script>
+	<script type="text/javascript" src="js/errorlevel.js"></script>
+	<script type="text/javascript" src="js/bitmat.js"></script>
+	<script type="text/javascript" src="js/datablock.js"></script>
+	<script type="text/javascript" src="js/bmparser.js"></script>
+	<script type="text/javascript" src="js/datamask.js"></script>
+	<script type="text/javascript" src="js/rsdecoder.js"></script>
+	<script type="text/javascript" src="js/gf256poly.js"></script>
+	<script type="text/javascript" src="js/gf256.js"></script>
+	<script type="text/javascript" src="js/decoder.js"></script>
+	<script type="text/javascript" src="js/qrcode.js"></script>
+	<script type="text/javascript" src="js/findpat.js"></script>
+	<script type="text/javascript" src="js/alignpat.js"></script>
+	<script type="text/javascript" src="js/databr.js"></script>
+	
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>QR Code Scanner</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+			<img id="imgBarcode" src="qr.png">
+			<p id="labelResult"></p>
+			<a href="#" id="btnScan" data-role="button">Scan</a>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <h4>Tizen Cookbook</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+</body>
+</html>

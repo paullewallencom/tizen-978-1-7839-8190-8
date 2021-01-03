@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Tizen web application with Bluetooth support."/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    
+    <link rel="stylesheet" href="tizen-web-ui-fw/latest/themes/tizen-white/tizen-web-ui-fw-theme.css" name="tizen-theme"/>
+    <title>Bluetooth</title>
+
+    <script src="tizen-web-ui-fw/latest/js/jquery.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw-libs.js"></script>
+    <script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw.js"
+        data-framework-theme="tizen-white"></script>
+
+	<script type="text/javascript" src="./js/bluetooth.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>Bluetooth</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+
+        	<label for="buttonType">Type:</label>
+			<select name="buttonType" id="buttonType" data-role="slider">
+				<option value="server">Server</option>
+				<option value="client">Client</option>
+			</select>
+
+        	<button id="buttonCtrl">Start</button>
+            <p id="labelInfo"></p>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+            <h4>Tizen Cookbook</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+</body>
+</html>

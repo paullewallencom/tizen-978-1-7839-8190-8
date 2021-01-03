@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/emailNotificaitons" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="tXSv8538c7.emailNotificaitons" package="tXSv8538c7" required_version="2.2"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>emailNotificaitons</name>
+    <tizen:privilege name="http://tizen.org/privilege/messaging.read"/>
+</widget>

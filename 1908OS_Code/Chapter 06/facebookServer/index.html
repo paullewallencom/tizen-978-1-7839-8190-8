@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Facebook Authentication</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script>
+$( document ).ready(function() {
+	var sDelimiter = '#access_token=';
+	var nDelimiterPos = document.URL.indexOf(sDelimiter);
+	var sAccessToken = 'unknown';
+	if (-1 != nDelimiterPos) {
+		sAccessToken = document.URL.substring(nDelimiterPos+sDelimiter.length);
+	}
+	$('#token').text('Facebook access token: ' + sAccessToken);
+});
+		</script>
+	</head>
+	<body>
+		<p id="token"></p>
+	</body>
+</html>

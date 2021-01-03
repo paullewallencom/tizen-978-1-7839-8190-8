@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Simple text editor for Tizen powered by Web SQL database."/>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	
+	<link rel="stylesheet" href="tizen-web-ui-fw/latest/themes/tizen-white/tizen-web-ui-fw-theme.css" name="tizen-theme"/>
+	<title>Web SQL Database Demo</title>
+	<script src="tizen-web-ui-fw/latest/js/jquery.js"></script>
+	<script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw-libs.js"></script>
+	<script src="tizen-web-ui-fw/latest/js/tizen-web-ui-fw.js"
+ data-framework-theme="tizen-white"></script>
+	<script type="text/javascript" src="./js/db.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body>
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+			<h1>Web SQL Database Demo</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<a href="#" id="btnSave" data-role="button" data-icon="check">Save</a>  
+			<textarea id="textbox"></textarea>  
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Tizen Cookbook</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+</body>
+</html>
